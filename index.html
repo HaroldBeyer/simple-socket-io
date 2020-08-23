@@ -10,6 +10,13 @@
             el = document.getElementById('server-time');
             el.innerHTML = 'Server time: ' + timeString;
         });
+
+        let counter = 0;
+        setInterval(() => {
+            ++counter;
+            socket.emit('ola', { counter });
+        }, 1000);
+
     </script>
 </head>
 
